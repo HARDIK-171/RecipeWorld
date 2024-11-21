@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Recipe Book</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background: #222121;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a:hover{
+    color: cyan;
+}
+
+.nav-list {
+    display: none;
+}
+nav a:hover{
+    color: cyan;
+}
+nav a:active{
+    background-color: #18470e;
+    color: #fff;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    background: url(heo-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    max-width: 550px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search-box input {
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    border: 1px solid red;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    outline: none;
+    border: 0;
+    border-radius: 0px 5px 5px 0;
+    font-size: 1rem;
+    background: rgb(237, 42, 42);
+    color: #fff;
+    cursor: pointer;
+}
+
+/*.......................Recipe Section...............-*/
+
+.recipes {
+    padding: 50px 0;
+}
+
+.recipes h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.recipe-section {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 10px;
+}
+
+.recipe-card {
+    background: #fff;
+    margin: 30px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.recipe-card h2 {
+    font-size: 22px;
+    padding: 20px;
+}
+
+.recipe-card p {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.recipe-card a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 24px;
+    padding: 20px;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-list {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Delicous Recipe</h1>
+            <nav>
+                <div class="menu-icon">&#9776;</div>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    <!--................Hero section...................-->
+    <section class="hero">
+        <div class="hero-section">
+            <h2>Welcome to our Recipe Book</h2>
+            <p>Search mouth watering recipes to satisfy your craving.</p>
+
+            <form action="#" class="search-box">
+                <input type="text" placeholder="Search Recipe">
+                <button type="submit">Search</button>
+            </form>
+
+        </div>
+    </section>
+    <!--..................Recipe Section-->
+    <section class="recipes">
+        <h1>Featured Recipes</h1>
+        <div class="recipe-section">
+            <div class="recipe-card">
+                <img src="dish-1.jpg" alt="">
+                <h2>Strawberry Custurd</h2>
+                <p>Strawberry custurd is a delicious dessert made with fresh strawberries and custurd.</p>
+                <a href="Strawberry.html">View Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="dhokla.jpg" alt="">
+                <h2>Dhokla</h2>
+                <p>Originating from the Indian state of Gujarat, dhokla is a vegetarian snack consisting of fermented chickpea batter and rice</p>
+                <a href="Shaksuka.html">View Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="paneertikka.jpg" alt="">
+                <h2>Paneer Tikka</h2>
+                <p>This North Indian tikka variety consists of a combination of marinated paneer cheese and vegetables that are cooked in a tandoor - a traditional Indian oven.</p>
+                <a href="paneertikka.html">View Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="misalpao.jpg" alt="">
+                <h2>Misal Pao</h2>
+                <p>Misal pav is a traditional Indian dish originating from Maharashtra. Its two main components are misal – a curry made with sprouted moth beans, usually topped with chivda, onions, chilis, and potatoes – and pav</p>
+                <a href="misalpao.html">View Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="Dosa.jpg" alt="">
+                <h2>Dosa</h2>
+                <p>Dosa is a traditional South Indian dish made from a fermented batter of rice and lent.</p>
+                <a href="Dosa.html">View Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="Raita.jpg" alt="">
+                <h2>Raita</h2>
+                <p>Raita is a popular Indian side dish made by mixing yogurt with various vegetables, spices, and herbs. It's refreshing and pairs well with spicy foods, as the yogurt cools down the palate</p>
+                <a href="raita.html">View Recipe</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Delicius Recipes</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
